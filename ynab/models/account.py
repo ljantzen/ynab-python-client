@@ -74,17 +74,38 @@ class Account(object):
         self._deleted = None
         self.discriminator = None
 
-        self.id = id
-        self.name = name
-        self.type = type
-        self.on_budget = on_budget
-        self.closed = closed
-        self.note = note
-        self.balance = balance
-        self.cleared_balance = cleared_balance
-        self.uncleared_balance = uncleared_balance
-        self.transfer_payee_id = transfer_payee_id
-        self.deleted = deleted
+	if id is not None:
+           self.id = id
+        
+        if name is not None:
+           self.name = name
+        
+        if type is not None: 
+           self.type = type
+        
+        if on_budget is not None:
+           self.on_budget = on_budget
+        
+        if closed is not None:
+           self.closed = closed
+        
+        if note is not None: 
+           self.note = note
+        
+        if balance is not None:
+           self.balance = balance
+        
+        if cleared_balance  is not None:
+           self.cleared_balance = cleared_balance
+        
+        if uncleared_balance is not None: 
+           self.uncleared_balance = uncleared_balance
+        
+        if transfer_payee_id  is not None: 
+           self.transfer_payee_id = transfer_payee_id
+        
+        if deleted is not None: 
+           self.deleted = deleted
 
     @property
     def id(self):
