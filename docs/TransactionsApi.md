@@ -51,7 +51,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
  **save_transactions** | [**SaveTransactionsWrapper**](SaveTransactionsWrapper.md)| The transaction or transactions to create.  To create a single transaction you can specify a value for the &#39;transaction&#39; object and to create multiple transactions you can specify an array of &#39;transactions&#39;.  It is expected that you will only provide a value for one of these objects. | 
 
 ### Return type
@@ -107,8 +107,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
- **transaction_id** | **str**| The id of the transaction | 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **transaction_id** | [**str**](.md)| The id of the transaction | 
 
 ### Return type
 
@@ -149,9 +149,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = ynab.TransactionsApi(ynab.ApiClient(configuration))
 budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can also be used to specify the last used budget)
-since_date = 'since_date_example' # str | If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). (optional)
+since_date = '2013-10-20' # date | If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). (optional)
 type = 'type_example' # str | If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported. (optional)
-last_knowledge_of_server = 'last_knowledge_of_server_example' # str | The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. (optional)
+last_knowledge_of_server = 56 # int | The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. (optional)
 
 try:
     # List transactions
@@ -165,10 +165,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
- **since_date** | **str**| If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). | [optional] 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **since_date** | **date**| If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). | [optional] 
  **type** | **str**| If specified, only transactions of the specified type will be included. &#39;uncategorized&#39; and &#39;unapproved&#39; are currently supported. | [optional] 
- **last_knowledge_of_server** | **str**| The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. | [optional] 
+ **last_knowledge_of_server** | **int**| The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. | [optional] 
 
 ### Return type
 
@@ -210,9 +210,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = ynab.TransactionsApi(ynab.ApiClient(configuration))
 budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can also be used to specify the last used budget)
 account_id = 'account_id_example' # str | The id of the account
-since_date = 'since_date_example' # str | If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). (optional)
+since_date = '2013-10-20' # date | If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). (optional)
 type = 'type_example' # str | If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported. (optional)
-last_knowledge_of_server = 'last_knowledge_of_server_example' # str | The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. (optional)
+last_knowledge_of_server = 56 # int | The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. (optional)
 
 try:
     # List account transactions
@@ -226,11 +226,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
- **account_id** | **str**| The id of the account | 
- **since_date** | **str**| If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). | [optional] 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **account_id** | [**str**](.md)| The id of the account | 
+ **since_date** | **date**| If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). | [optional] 
  **type** | **str**| If specified, only transactions of the specified type will be included. &#39;uncategorized&#39; and &#39;unapproved&#39; are currently supported. | [optional] 
- **last_knowledge_of_server** | **str**| The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. | [optional] 
+ **last_knowledge_of_server** | **int**| The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. | [optional] 
 
 ### Return type
 
@@ -272,9 +272,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = ynab.TransactionsApi(ynab.ApiClient(configuration))
 budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can also be used to specify the last used budget)
 category_id = 'category_id_example' # str | The id of the category
-since_date = 'since_date_example' # str | If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). (optional)
+since_date = '2013-10-20' # date | If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). (optional)
 type = 'type_example' # str | If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported. (optional)
-last_knowledge_of_server = 'last_knowledge_of_server_example' # str | The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. (optional)
+last_knowledge_of_server = 56 # int | The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. (optional)
 
 try:
     # List category transactions
@@ -288,11 +288,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
- **category_id** | **str**| The id of the category | 
- **since_date** | **str**| If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). | [optional] 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **category_id** | [**str**](.md)| The id of the category | 
+ **since_date** | **date**| If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). | [optional] 
  **type** | **str**| If specified, only transactions of the specified type will be included. &#39;uncategorized&#39; and &#39;unapproved&#39; are currently supported. | [optional] 
- **last_knowledge_of_server** | **str**| The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. | [optional] 
+ **last_knowledge_of_server** | **int**| The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. | [optional] 
 
 ### Return type
 
@@ -334,9 +334,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = ynab.TransactionsApi(ynab.ApiClient(configuration))
 budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can also be used to specify the last used budget)
 payee_id = 'payee_id_example' # str | The id of the payee
-since_date = 'since_date_example' # str | If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). (optional)
+since_date = '2013-10-20' # date | If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). (optional)
 type = 'type_example' # str | If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported. (optional)
-last_knowledge_of_server = 'last_knowledge_of_server_example' # str | The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. (optional)
+last_knowledge_of_server = 56 # int | The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. (optional)
 
 try:
     # List payee transactions
@@ -350,11 +350,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
- **payee_id** | **str**| The id of the payee | 
- **since_date** | **str**| If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). | [optional] 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **payee_id** | [**str**](.md)| The id of the payee | 
+ **since_date** | **date**| If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30). | [optional] 
  **type** | **str**| If specified, only transactions of the specified type will be included. &#39;uncategorized&#39; and &#39;unapproved&#39; are currently supported. | [optional] 
- **last_knowledge_of_server** | **str**| The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. | [optional] 
+ **last_knowledge_of_server** | **int**| The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. | [optional] 
 
 ### Return type
 
@@ -410,8 +410,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
- **transaction_id** | **str**| The id of the transaction | 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **transaction_id** | [**str**](.md)| The id of the transaction | 
  **transaction** | [**SaveTransactionWrapper**](SaveTransactionWrapper.md)| The transaction to update | 
 
 ### Return type

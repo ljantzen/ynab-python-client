@@ -44,7 +44,7 @@ class BudgetsApi(object):
 
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param str last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
         :return: BudgetDetailResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -67,7 +67,7 @@ class BudgetsApi(object):
 
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param str last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
         :return: BudgetDetailResponse
                  If the method is called asynchronously,
                  returns the request thread.

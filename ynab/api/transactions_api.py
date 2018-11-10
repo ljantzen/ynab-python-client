@@ -250,9 +250,9 @@ class TransactionsApi(object):
 
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param str since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
+        :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
         :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param str last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
         :return: TransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -275,9 +275,9 @@ class TransactionsApi(object):
 
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param str since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
+        :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
         :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param str last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
         :return: TransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -358,9 +358,9 @@ class TransactionsApi(object):
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
         :param str account_id: The id of the account (required)
-        :param str since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
+        :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
         :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param str last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
         :return: TransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -384,9 +384,9 @@ class TransactionsApi(object):
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
         :param str account_id: The id of the account (required)
-        :param str since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
+        :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
         :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param str last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
         :return: TransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -473,9 +473,9 @@ class TransactionsApi(object):
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
         :param str category_id: The id of the category (required)
-        :param str since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
+        :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
         :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param str last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
         :return: HybridTransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -499,9 +499,9 @@ class TransactionsApi(object):
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
         :param str category_id: The id of the category (required)
-        :param str since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
+        :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
         :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param str last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
         :return: HybridTransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -588,9 +588,9 @@ class TransactionsApi(object):
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
         :param str payee_id: The id of the payee (required)
-        :param str since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
+        :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
         :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param str last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
         :return: HybridTransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -614,9 +614,9 @@ class TransactionsApi(object):
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
         :param str payee_id: The id of the payee (required)
-        :param str since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
+        :param date since_date: If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
         :param str type: If specified, only transactions of the specified type will be included. 'uncategorized' and 'unapproved' are currently supported.
-        :param str last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
+        :param int last_knowledge_of_server: The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included.
         :return: HybridTransactionsResponse
                  If the method is called asynchronously,
                  returns the request thread.

@@ -33,21 +33,26 @@ class SaveTransactionsWrapper(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'transaction': 'SaveTransaction'
+        'transaction': 'SaveTransaction',
+        'transactions': 'list[SaveTransaction]'
     }
 
     attribute_map = {
-        'transaction': 'transaction'
+        'transaction': 'transaction',
+        'transactions': 'transactions'
     }
 
-    def __init__(self, transaction=None):  # noqa: E501
+    def __init__(self, transaction=None, transactions=None):  # noqa: E501
         """SaveTransactionsWrapper - a model defined in Swagger"""  # noqa: E501
 
         self._transaction = None
+        self._transactions = None
         self.discriminator = None
 
         if transaction is not None:
             self.transaction = transaction
+        if transactions is not None:
+            self.transactions = transactions
 
     @property
     def transaction(self):
@@ -69,6 +74,27 @@ class SaveTransactionsWrapper(object):
         """
 
         self._transaction = transaction
+
+    @property
+    def transactions(self):
+        """Gets the transactions of this SaveTransactionsWrapper.  # noqa: E501
+
+
+        :return: The transactions of this SaveTransactionsWrapper.  # noqa: E501
+        :rtype: list[SaveTransaction]
+        """
+        return self._transactions
+
+    @transactions.setter
+    def transactions(self, transactions):
+        """Sets the transactions of this SaveTransactionsWrapper.
+
+
+        :param transactions: The transactions of this SaveTransactionsWrapper.  # noqa: E501
+        :type: list[SaveTransaction]
+        """
+
+        self._transactions = transactions
 
     def to_dict(self):
         """Returns the model properties as a dict"""

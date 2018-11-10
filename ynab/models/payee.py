@@ -31,14 +31,128 @@ class Payee(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
+        'name': 'str',
+        'transfer_account_id': 'str',
+        'deleted': 'bool'
     }
 
     attribute_map = {
+        'id': 'id',
+        'name': 'name',
+        'transfer_account_id': 'transfer_account_id',
+        'deleted': 'deleted'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, id=None, name=None, transfer_account_id=None, deleted=None):  # noqa: E501
         """Payee - a model defined in Swagger"""  # noqa: E501
+
+        self._id = None
+        self._name = None
+        self._transfer_account_id = None
+        self._deleted = None
         self.discriminator = None
+
+        self.id = id
+        self.name = name
+        self.transfer_account_id = transfer_account_id
+        self.deleted = deleted
+
+    @property
+    def id(self):
+        """Gets the id of this Payee.  # noqa: E501
+
+
+        :return: The id of this Payee.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this Payee.
+
+
+        :param id: The id of this Payee.  # noqa: E501
+        :type: str
+        """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
+
+        self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this Payee.  # noqa: E501
+
+
+        :return: The name of this Payee.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this Payee.
+
+
+        :param name: The name of this Payee.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def transfer_account_id(self):
+        """Gets the transfer_account_id of this Payee.  # noqa: E501
+
+        If a transfer payee, the account_id to which this payee transfers to  # noqa: E501
+
+        :return: The transfer_account_id of this Payee.  # noqa: E501
+        :rtype: str
+        """
+        return self._transfer_account_id
+
+    @transfer_account_id.setter
+    def transfer_account_id(self, transfer_account_id):
+        """Sets the transfer_account_id of this Payee.
+
+        If a transfer payee, the account_id to which this payee transfers to  # noqa: E501
+
+        :param transfer_account_id: The transfer_account_id of this Payee.  # noqa: E501
+        :type: str
+        """
+        if transfer_account_id is None:
+            raise ValueError("Invalid value for `transfer_account_id`, must not be `None`")  # noqa: E501
+
+        self._transfer_account_id = transfer_account_id
+
+    @property
+    def deleted(self):
+        """Gets the deleted of this Payee.  # noqa: E501
+
+        Whether or not the payee has been deleted.  Deleted payees will only be included in delta requests.  # noqa: E501
+
+        :return: The deleted of this Payee.  # noqa: E501
+        :rtype: bool
+        """
+        return self._deleted
+
+    @deleted.setter
+    def deleted(self, deleted):
+        """Sets the deleted of this Payee.
+
+        Whether or not the payee has been deleted.  Deleted payees will only be included in delta requests.  # noqa: E501
+
+        :param deleted: The deleted of this Payee.  # noqa: E501
+        :type: bool
+        """
+        if deleted is None:
+            raise ValueError("Invalid value for `deleted`, must not be `None`")  # noqa: E501
+
+        self._deleted = deleted
 
     def to_dict(self):
         """Returns the model properties as a dict"""

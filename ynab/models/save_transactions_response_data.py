@@ -33,21 +33,60 @@ class SaveTransactionsResponseData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'transaction': 'TransactionDetail'
+        'transaction_ids': 'list[str]',
+        'transaction': 'TransactionDetail',
+        'transactions': 'list[TransactionDetail]',
+        'duplicate_import_ids': 'list[str]'
     }
 
     attribute_map = {
-        'transaction': 'transaction'
+        'transaction_ids': 'transaction_ids',
+        'transaction': 'transaction',
+        'transactions': 'transactions',
+        'duplicate_import_ids': 'duplicate_import_ids'
     }
 
-    def __init__(self, transaction=None):  # noqa: E501
+    def __init__(self, transaction_ids=None, transaction=None, transactions=None, duplicate_import_ids=None):  # noqa: E501
         """SaveTransactionsResponseData - a model defined in Swagger"""  # noqa: E501
 
+        self._transaction_ids = None
         self._transaction = None
+        self._transactions = None
+        self._duplicate_import_ids = None
         self.discriminator = None
 
+        self.transaction_ids = transaction_ids
         if transaction is not None:
             self.transaction = transaction
+        if transactions is not None:
+            self.transactions = transactions
+        if duplicate_import_ids is not None:
+            self.duplicate_import_ids = duplicate_import_ids
+
+    @property
+    def transaction_ids(self):
+        """Gets the transaction_ids of this SaveTransactionsResponseData.  # noqa: E501
+
+        The transaction ids that were saved  # noqa: E501
+
+        :return: The transaction_ids of this SaveTransactionsResponseData.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._transaction_ids
+
+    @transaction_ids.setter
+    def transaction_ids(self, transaction_ids):
+        """Sets the transaction_ids of this SaveTransactionsResponseData.
+
+        The transaction ids that were saved  # noqa: E501
+
+        :param transaction_ids: The transaction_ids of this SaveTransactionsResponseData.  # noqa: E501
+        :type: list[str]
+        """
+        if transaction_ids is None:
+            raise ValueError("Invalid value for `transaction_ids`, must not be `None`")  # noqa: E501
+
+        self._transaction_ids = transaction_ids
 
     @property
     def transaction(self):
@@ -71,6 +110,52 @@ class SaveTransactionsResponseData(object):
         """
 
         self._transaction = transaction
+
+    @property
+    def transactions(self):
+        """Gets the transactions of this SaveTransactionsResponseData.  # noqa: E501
+
+        If multiple transactions were specified, the transactions that were saved  # noqa: E501
+
+        :return: The transactions of this SaveTransactionsResponseData.  # noqa: E501
+        :rtype: list[TransactionDetail]
+        """
+        return self._transactions
+
+    @transactions.setter
+    def transactions(self, transactions):
+        """Sets the transactions of this SaveTransactionsResponseData.
+
+        If multiple transactions were specified, the transactions that were saved  # noqa: E501
+
+        :param transactions: The transactions of this SaveTransactionsResponseData.  # noqa: E501
+        :type: list[TransactionDetail]
+        """
+
+        self._transactions = transactions
+
+    @property
+    def duplicate_import_ids(self):
+        """Gets the duplicate_import_ids of this SaveTransactionsResponseData.  # noqa: E501
+
+        If multiple transactions were specified, a list of import_ids that were not were created because of an existing import_id found on the same account  # noqa: E501
+
+        :return: The duplicate_import_ids of this SaveTransactionsResponseData.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._duplicate_import_ids
+
+    @duplicate_import_ids.setter
+    def duplicate_import_ids(self, duplicate_import_ids):
+        """Sets the duplicate_import_ids of this SaveTransactionsResponseData.
+
+        If multiple transactions were specified, a list of import_ids that were not were created because of an existing import_id found on the same account  # noqa: E501
+
+        :param duplicate_import_ids: The duplicate_import_ids of this SaveTransactionsResponseData.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._duplicate_import_ids = duplicate_import_ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

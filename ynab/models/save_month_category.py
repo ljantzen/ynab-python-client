@@ -31,14 +31,45 @@ class SaveMonthCategory(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'budgeted': 'int'
     }
 
     attribute_map = {
+        'budgeted': 'budgeted'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, budgeted=None):  # noqa: E501
         """SaveMonthCategory - a model defined in Swagger"""  # noqa: E501
+
+        self._budgeted = None
         self.discriminator = None
+
+        self.budgeted = budgeted
+
+    @property
+    def budgeted(self):
+        """Gets the budgeted of this SaveMonthCategory.  # noqa: E501
+
+        Budgeted amount in milliunits format  # noqa: E501
+
+        :return: The budgeted of this SaveMonthCategory.  # noqa: E501
+        :rtype: int
+        """
+        return self._budgeted
+
+    @budgeted.setter
+    def budgeted(self, budgeted):
+        """Sets the budgeted of this SaveMonthCategory.
+
+        Budgeted amount in milliunits format  # noqa: E501
+
+        :param budgeted: The budgeted of this SaveMonthCategory.  # noqa: E501
+        :type: int
+        """
+        if budgeted is None:
+            raise ValueError("Invalid value for `budgeted`, must not be `None`")  # noqa: E501
+
+        self._budgeted = budgeted
 
     def to_dict(self):
         """Returns the model properties as a dict"""

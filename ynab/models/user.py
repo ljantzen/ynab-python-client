@@ -31,14 +31,43 @@ class User(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str'
     }
 
     attribute_map = {
+        'id': 'id'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, id=None):  # noqa: E501
         """User - a model defined in Swagger"""  # noqa: E501
+
+        self._id = None
         self.discriminator = None
+
+        self.id = id
+
+    @property
+    def id(self):
+        """Gets the id of this User.  # noqa: E501
+
+
+        :return: The id of this User.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this User.
+
+
+        :param id: The id of this User.  # noqa: E501
+        :type: str
+        """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

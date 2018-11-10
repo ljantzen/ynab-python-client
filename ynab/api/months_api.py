@@ -44,7 +44,7 @@ class MonthsApi(object):
 
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param str month: The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
+        :param date month: The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
         :return: MonthDetailResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -67,7 +67,7 @@ class MonthsApi(object):
 
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param str month: The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
+        :param date month: The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
         :return: MonthDetailResponse
                  If the method is called asynchronously,
                  returns the request thread.

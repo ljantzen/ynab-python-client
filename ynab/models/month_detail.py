@@ -16,6 +16,7 @@ import re  # noqa: F401
 
 import six
 
+from ynab.models.category import Category  # noqa: F401,E501
 from ynab.models.month_summary import MonthSummary  # noqa: F401,E501
 
 
@@ -33,14 +34,244 @@ class MonthDetail(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'month': 'date',
+        'note': 'str',
+        'income': 'int',
+        'budgeted': 'int',
+        'activity': 'int',
+        'to_be_budgeted': 'int',
+        'age_of_money': 'int',
+        'categories': 'list[Category]'
     }
 
     attribute_map = {
+        'month': 'month',
+        'note': 'note',
+        'income': 'income',
+        'budgeted': 'budgeted',
+        'activity': 'activity',
+        'to_be_budgeted': 'to_be_budgeted',
+        'age_of_money': 'age_of_money',
+        'categories': 'categories'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, month=None, note=None, income=None, budgeted=None, activity=None, to_be_budgeted=None, age_of_money=None, categories=None):  # noqa: E501
         """MonthDetail - a model defined in Swagger"""  # noqa: E501
+
+        self._month = None
+        self._note = None
+        self._income = None
+        self._budgeted = None
+        self._activity = None
+        self._to_be_budgeted = None
+        self._age_of_money = None
+        self._categories = None
         self.discriminator = None
+
+        self.month = month
+        self.note = note
+        self.income = income
+        self.budgeted = budgeted
+        self.activity = activity
+        self.to_be_budgeted = to_be_budgeted
+        self.age_of_money = age_of_money
+        self.categories = categories
+
+    @property
+    def month(self):
+        """Gets the month of this MonthDetail.  # noqa: E501
+
+
+        :return: The month of this MonthDetail.  # noqa: E501
+        :rtype: date
+        """
+        return self._month
+
+    @month.setter
+    def month(self, month):
+        """Sets the month of this MonthDetail.
+
+
+        :param month: The month of this MonthDetail.  # noqa: E501
+        :type: date
+        """
+        if month is None:
+            raise ValueError("Invalid value for `month`, must not be `None`")  # noqa: E501
+
+        self._month = month
+
+    @property
+    def note(self):
+        """Gets the note of this MonthDetail.  # noqa: E501
+
+
+        :return: The note of this MonthDetail.  # noqa: E501
+        :rtype: str
+        """
+        return self._note
+
+    @note.setter
+    def note(self, note):
+        """Sets the note of this MonthDetail.
+
+
+        :param note: The note of this MonthDetail.  # noqa: E501
+        :type: str
+        """
+        if note is None:
+            raise ValueError("Invalid value for `note`, must not be `None`")  # noqa: E501
+
+        self._note = note
+
+    @property
+    def income(self):
+        """Gets the income of this MonthDetail.  # noqa: E501
+
+        The total amount in transactions categorized to 'Inflow: To be Budgeted' in the month  # noqa: E501
+
+        :return: The income of this MonthDetail.  # noqa: E501
+        :rtype: int
+        """
+        return self._income
+
+    @income.setter
+    def income(self, income):
+        """Sets the income of this MonthDetail.
+
+        The total amount in transactions categorized to 'Inflow: To be Budgeted' in the month  # noqa: E501
+
+        :param income: The income of this MonthDetail.  # noqa: E501
+        :type: int
+        """
+        if income is None:
+            raise ValueError("Invalid value for `income`, must not be `None`")  # noqa: E501
+
+        self._income = income
+
+    @property
+    def budgeted(self):
+        """Gets the budgeted of this MonthDetail.  # noqa: E501
+
+        The total amount budgeted in the month  # noqa: E501
+
+        :return: The budgeted of this MonthDetail.  # noqa: E501
+        :rtype: int
+        """
+        return self._budgeted
+
+    @budgeted.setter
+    def budgeted(self, budgeted):
+        """Sets the budgeted of this MonthDetail.
+
+        The total amount budgeted in the month  # noqa: E501
+
+        :param budgeted: The budgeted of this MonthDetail.  # noqa: E501
+        :type: int
+        """
+        if budgeted is None:
+            raise ValueError("Invalid value for `budgeted`, must not be `None`")  # noqa: E501
+
+        self._budgeted = budgeted
+
+    @property
+    def activity(self):
+        """Gets the activity of this MonthDetail.  # noqa: E501
+
+        The total amount in transactions in the month, excluding those categorized to 'Inflow: To be Budgeted'  # noqa: E501
+
+        :return: The activity of this MonthDetail.  # noqa: E501
+        :rtype: int
+        """
+        return self._activity
+
+    @activity.setter
+    def activity(self, activity):
+        """Sets the activity of this MonthDetail.
+
+        The total amount in transactions in the month, excluding those categorized to 'Inflow: To be Budgeted'  # noqa: E501
+
+        :param activity: The activity of this MonthDetail.  # noqa: E501
+        :type: int
+        """
+        if activity is None:
+            raise ValueError("Invalid value for `activity`, must not be `None`")  # noqa: E501
+
+        self._activity = activity
+
+    @property
+    def to_be_budgeted(self):
+        """Gets the to_be_budgeted of this MonthDetail.  # noqa: E501
+
+        The available amount for 'To be Budgeted'  # noqa: E501
+
+        :return: The to_be_budgeted of this MonthDetail.  # noqa: E501
+        :rtype: int
+        """
+        return self._to_be_budgeted
+
+    @to_be_budgeted.setter
+    def to_be_budgeted(self, to_be_budgeted):
+        """Sets the to_be_budgeted of this MonthDetail.
+
+        The available amount for 'To be Budgeted'  # noqa: E501
+
+        :param to_be_budgeted: The to_be_budgeted of this MonthDetail.  # noqa: E501
+        :type: int
+        """
+        if to_be_budgeted is None:
+            raise ValueError("Invalid value for `to_be_budgeted`, must not be `None`")  # noqa: E501
+
+        self._to_be_budgeted = to_be_budgeted
+
+    @property
+    def age_of_money(self):
+        """Gets the age_of_money of this MonthDetail.  # noqa: E501
+
+        The Age of Money as of the month  # noqa: E501
+
+        :return: The age_of_money of this MonthDetail.  # noqa: E501
+        :rtype: int
+        """
+        return self._age_of_money
+
+    @age_of_money.setter
+    def age_of_money(self, age_of_money):
+        """Sets the age_of_money of this MonthDetail.
+
+        The Age of Money as of the month  # noqa: E501
+
+        :param age_of_money: The age_of_money of this MonthDetail.  # noqa: E501
+        :type: int
+        """
+        if age_of_money is None:
+            raise ValueError("Invalid value for `age_of_money`, must not be `None`")  # noqa: E501
+
+        self._age_of_money = age_of_money
+
+    @property
+    def categories(self):
+        """Gets the categories of this MonthDetail.  # noqa: E501
+
+        The budget month categories.  Amounts (budgeted, activity, balance, etc.) are specific to the {month} parameter specified.  # noqa: E501
+
+        :return: The categories of this MonthDetail.  # noqa: E501
+        :rtype: list[Category]
+        """
+        return self._categories
+
+    @categories.setter
+    def categories(self, categories):
+        """Sets the categories of this MonthDetail.
+
+        The budget month categories.  Amounts (budgeted, activity, balance, etc.) are specific to the {month} parameter specified.  # noqa: E501
+
+        :param categories: The categories of this MonthDetail.  # noqa: E501
+        :type: list[Category]
+        """
+        if categories is None:
+            raise ValueError("Invalid value for `categories`, must not be `None`")  # noqa: E501
+
+        self._categories = categories
 
     def to_dict(self):
         """Returns the model properties as a dict"""

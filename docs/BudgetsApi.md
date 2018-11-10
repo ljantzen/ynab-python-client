@@ -33,7 +33,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = ynab.BudgetsApi(ynab.ApiClient(configuration))
 budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can also be used to specify the last used budget)
-last_knowledge_of_server = 'last_knowledge_of_server_example' # str | The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. (optional)
+last_knowledge_of_server = 56 # int | The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. (optional)
 
 try:
     # Single budget
@@ -47,8 +47,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
- **last_knowledge_of_server** | **str**| The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. | [optional] 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **last_knowledge_of_server** | **int**| The starting server knowledge.  If provided, only entities that have changed since last_knowledge_of_server will be included. | [optional] 
 
 ### Return type
 
@@ -102,7 +102,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
 
 ### Return type
 

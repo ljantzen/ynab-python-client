@@ -242,7 +242,7 @@ class CategoriesApi(object):
 
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param str month: The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
+        :param date month: The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
         :param str category_id: The id of the category (required)
         :return: CategoryResponse
                  If the method is called asynchronously,
@@ -266,7 +266,7 @@ class CategoriesApi(object):
 
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param str month: The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
+        :param date month: The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
         :param str category_id: The id of the category (required)
         :return: CategoryResponse
                  If the method is called asynchronously,
@@ -353,7 +353,7 @@ class CategoriesApi(object):
 
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param str month: The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
+        :param date month: The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
         :param str category_id: The id of the category (required)
         :param SaveMonthCategoryWrapper month_category: The month category to update (required)
         :return: CategoryResponse
@@ -378,7 +378,7 @@ class CategoriesApi(object):
 
         :param async bool
         :param str budget_id: The id of the budget (\"last-used\" can also be used to specify the last used budget) (required)
-        :param str month: The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
+        :param date month: The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC)) (required)
         :param str category_id: The id of the category (required)
         :param SaveMonthCategoryWrapper month_category: The month category to update (required)
         :return: CategoryResponse

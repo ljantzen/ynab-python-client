@@ -46,8 +46,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
- **account_id** | **str**| The id of the account | 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **account_id** | [**str**](.md)| The id of the account | 
 
 ### Return type
 
@@ -101,7 +101,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
 
 ### Return type
 

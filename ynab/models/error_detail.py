@@ -31,14 +31,97 @@ class ErrorDetail(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
+        'name': 'str',
+        'detail': 'str'
     }
 
     attribute_map = {
+        'id': 'id',
+        'name': 'name',
+        'detail': 'detail'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, id=None, name=None, detail=None):  # noqa: E501
         """ErrorDetail - a model defined in Swagger"""  # noqa: E501
+
+        self._id = None
+        self._name = None
+        self._detail = None
         self.discriminator = None
+
+        self.id = id
+        self.name = name
+        self.detail = detail
+
+    @property
+    def id(self):
+        """Gets the id of this ErrorDetail.  # noqa: E501
+
+
+        :return: The id of this ErrorDetail.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this ErrorDetail.
+
+
+        :param id: The id of this ErrorDetail.  # noqa: E501
+        :type: str
+        """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
+
+        self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this ErrorDetail.  # noqa: E501
+
+
+        :return: The name of this ErrorDetail.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this ErrorDetail.
+
+
+        :param name: The name of this ErrorDetail.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def detail(self):
+        """Gets the detail of this ErrorDetail.  # noqa: E501
+
+
+        :return: The detail of this ErrorDetail.  # noqa: E501
+        :rtype: str
+        """
+        return self._detail
+
+    @detail.setter
+    def detail(self, detail):
+        """Sets the detail of this ErrorDetail.
+
+
+        :param detail: The detail of this ErrorDetail.  # noqa: E501
+        :type: str
+        """
+        if detail is None:
+            raise ValueError("Invalid value for `detail`, must not be `None`")  # noqa: E501
+
+        self._detail = detail
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -45,7 +45,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
  **transactions** | [**BulkTransactions**](BulkTransactions.md)| The list of transactions to create | 
 
 ### Return type

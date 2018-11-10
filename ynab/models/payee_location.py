@@ -31,14 +31,153 @@ class PayeeLocation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
+        'payee_id': 'str',
+        'latitude': 'str',
+        'longitude': 'str',
+        'deleted': 'bool'
     }
 
     attribute_map = {
+        'id': 'id',
+        'payee_id': 'payee_id',
+        'latitude': 'latitude',
+        'longitude': 'longitude',
+        'deleted': 'deleted'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, id=None, payee_id=None, latitude=None, longitude=None, deleted=None):  # noqa: E501
         """PayeeLocation - a model defined in Swagger"""  # noqa: E501
+
+        self._id = None
+        self._payee_id = None
+        self._latitude = None
+        self._longitude = None
+        self._deleted = None
         self.discriminator = None
+
+        self.id = id
+        self.payee_id = payee_id
+        self.latitude = latitude
+        self.longitude = longitude
+        self.deleted = deleted
+
+    @property
+    def id(self):
+        """Gets the id of this PayeeLocation.  # noqa: E501
+
+
+        :return: The id of this PayeeLocation.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this PayeeLocation.
+
+
+        :param id: The id of this PayeeLocation.  # noqa: E501
+        :type: str
+        """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
+
+        self._id = id
+
+    @property
+    def payee_id(self):
+        """Gets the payee_id of this PayeeLocation.  # noqa: E501
+
+
+        :return: The payee_id of this PayeeLocation.  # noqa: E501
+        :rtype: str
+        """
+        return self._payee_id
+
+    @payee_id.setter
+    def payee_id(self, payee_id):
+        """Sets the payee_id of this PayeeLocation.
+
+
+        :param payee_id: The payee_id of this PayeeLocation.  # noqa: E501
+        :type: str
+        """
+        if payee_id is None:
+            raise ValueError("Invalid value for `payee_id`, must not be `None`")  # noqa: E501
+
+        self._payee_id = payee_id
+
+    @property
+    def latitude(self):
+        """Gets the latitude of this PayeeLocation.  # noqa: E501
+
+
+        :return: The latitude of this PayeeLocation.  # noqa: E501
+        :rtype: str
+        """
+        return self._latitude
+
+    @latitude.setter
+    def latitude(self, latitude):
+        """Sets the latitude of this PayeeLocation.
+
+
+        :param latitude: The latitude of this PayeeLocation.  # noqa: E501
+        :type: str
+        """
+        if latitude is None:
+            raise ValueError("Invalid value for `latitude`, must not be `None`")  # noqa: E501
+
+        self._latitude = latitude
+
+    @property
+    def longitude(self):
+        """Gets the longitude of this PayeeLocation.  # noqa: E501
+
+
+        :return: The longitude of this PayeeLocation.  # noqa: E501
+        :rtype: str
+        """
+        return self._longitude
+
+    @longitude.setter
+    def longitude(self, longitude):
+        """Sets the longitude of this PayeeLocation.
+
+
+        :param longitude: The longitude of this PayeeLocation.  # noqa: E501
+        :type: str
+        """
+        if longitude is None:
+            raise ValueError("Invalid value for `longitude`, must not be `None`")  # noqa: E501
+
+        self._longitude = longitude
+
+    @property
+    def deleted(self):
+        """Gets the deleted of this PayeeLocation.  # noqa: E501
+
+        Whether or not the payee location has been deleted.  Deleted payee locations will only be included in delta requests.  # noqa: E501
+
+        :return: The deleted of this PayeeLocation.  # noqa: E501
+        :rtype: bool
+        """
+        return self._deleted
+
+    @deleted.setter
+    def deleted(self, deleted):
+        """Sets the deleted of this PayeeLocation.
+
+        Whether or not the payee location has been deleted.  Deleted payee locations will only be included in delta requests.  # noqa: E501
+
+        :param deleted: The deleted of this PayeeLocation.  # noqa: E501
+        :type: bool
+        """
+        if deleted is None:
+            raise ValueError("Invalid value for `deleted`, must not be `None`")  # noqa: E501
+
+        self._deleted = deleted
 
     def to_dict(self):
         """Returns the model properties as a dict"""

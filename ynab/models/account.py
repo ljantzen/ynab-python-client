@@ -31,14 +31,335 @@ class Account(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
+        'name': 'str',
+        'type': 'str',
+        'on_budget': 'bool',
+        'closed': 'bool',
+        'note': 'str',
+        'balance': 'int',
+        'cleared_balance': 'int',
+        'uncleared_balance': 'int',
+        'transfer_payee_id': 'str',
+        'deleted': 'bool'
     }
 
     attribute_map = {
+        'id': 'id',
+        'name': 'name',
+        'type': 'type',
+        'on_budget': 'on_budget',
+        'closed': 'closed',
+        'note': 'note',
+        'balance': 'balance',
+        'cleared_balance': 'cleared_balance',
+        'uncleared_balance': 'uncleared_balance',
+        'transfer_payee_id': 'transfer_payee_id',
+        'deleted': 'deleted'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, id=None, name=None, type=None, on_budget=None, closed=None, note=None, balance=None, cleared_balance=None, uncleared_balance=None, transfer_payee_id=None, deleted=None):  # noqa: E501
         """Account - a model defined in Swagger"""  # noqa: E501
+
+        self._id = None
+        self._name = None
+        self._type = None
+        self._on_budget = None
+        self._closed = None
+        self._note = None
+        self._balance = None
+        self._cleared_balance = None
+        self._uncleared_balance = None
+        self._transfer_payee_id = None
+        self._deleted = None
         self.discriminator = None
+
+        self.id = id
+        self.name = name
+        self.type = type
+        self.on_budget = on_budget
+        self.closed = closed
+        self.note = note
+        self.balance = balance
+        self.cleared_balance = cleared_balance
+        self.uncleared_balance = uncleared_balance
+        self.transfer_payee_id = transfer_payee_id
+        self.deleted = deleted
+
+    @property
+    def id(self):
+        """Gets the id of this Account.  # noqa: E501
+
+
+        :return: The id of this Account.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this Account.
+
+
+        :param id: The id of this Account.  # noqa: E501
+        :type: str
+        """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
+
+        self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this Account.  # noqa: E501
+
+
+        :return: The name of this Account.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this Account.
+
+
+        :param name: The name of this Account.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def type(self):
+        """Gets the type of this Account.  # noqa: E501
+
+        The type of account. Note: payPal, merchantAccount, investmentAccount, and mortgage types have been deprecated and will be removed in the future.  # noqa: E501
+
+        :return: The type of this Account.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this Account.
+
+        The type of account. Note: payPal, merchantAccount, investmentAccount, and mortgage types have been deprecated and will be removed in the future.  # noqa: E501
+
+        :param type: The type of this Account.  # noqa: E501
+        :type: str
+        """
+        if type is None:
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+        allowed_values = ["checking", "savings", "cash", "creditCard", "lineOfCredit", "otherAsset", "otherLiability", "payPal", "merchantAccount", "investmentAccount", "mortgage"]  # noqa: E501
+        if type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
+                .format(type, allowed_values)
+            )
+
+        self._type = type
+
+    @property
+    def on_budget(self):
+        """Gets the on_budget of this Account.  # noqa: E501
+
+        Whether this account is on budget or not  # noqa: E501
+
+        :return: The on_budget of this Account.  # noqa: E501
+        :rtype: bool
+        """
+        return self._on_budget
+
+    @on_budget.setter
+    def on_budget(self, on_budget):
+        """Sets the on_budget of this Account.
+
+        Whether this account is on budget or not  # noqa: E501
+
+        :param on_budget: The on_budget of this Account.  # noqa: E501
+        :type: bool
+        """
+        if on_budget is None:
+            raise ValueError("Invalid value for `on_budget`, must not be `None`")  # noqa: E501
+
+        self._on_budget = on_budget
+
+    @property
+    def closed(self):
+        """Gets the closed of this Account.  # noqa: E501
+
+        Whether this account is closed or not  # noqa: E501
+
+        :return: The closed of this Account.  # noqa: E501
+        :rtype: bool
+        """
+        return self._closed
+
+    @closed.setter
+    def closed(self, closed):
+        """Sets the closed of this Account.
+
+        Whether this account is closed or not  # noqa: E501
+
+        :param closed: The closed of this Account.  # noqa: E501
+        :type: bool
+        """
+        if closed is None:
+            raise ValueError("Invalid value for `closed`, must not be `None`")  # noqa: E501
+
+        self._closed = closed
+
+    @property
+    def note(self):
+        """Gets the note of this Account.  # noqa: E501
+
+
+        :return: The note of this Account.  # noqa: E501
+        :rtype: str
+        """
+        return self._note
+
+    @note.setter
+    def note(self, note):
+        """Sets the note of this Account.
+
+
+        :param note: The note of this Account.  # noqa: E501
+        :type: str
+        """
+        if note is None:
+            raise ValueError("Invalid value for `note`, must not be `None`")  # noqa: E501
+
+        self._note = note
+
+    @property
+    def balance(self):
+        """Gets the balance of this Account.  # noqa: E501
+
+        The current balance of the account in milliunits format  # noqa: E501
+
+        :return: The balance of this Account.  # noqa: E501
+        :rtype: int
+        """
+        return self._balance
+
+    @balance.setter
+    def balance(self, balance):
+        """Sets the balance of this Account.
+
+        The current balance of the account in milliunits format  # noqa: E501
+
+        :param balance: The balance of this Account.  # noqa: E501
+        :type: int
+        """
+        if balance is None:
+            raise ValueError("Invalid value for `balance`, must not be `None`")  # noqa: E501
+
+        self._balance = balance
+
+    @property
+    def cleared_balance(self):
+        """Gets the cleared_balance of this Account.  # noqa: E501
+
+        The current cleared balance of the account in milliunits format  # noqa: E501
+
+        :return: The cleared_balance of this Account.  # noqa: E501
+        :rtype: int
+        """
+        return self._cleared_balance
+
+    @cleared_balance.setter
+    def cleared_balance(self, cleared_balance):
+        """Sets the cleared_balance of this Account.
+
+        The current cleared balance of the account in milliunits format  # noqa: E501
+
+        :param cleared_balance: The cleared_balance of this Account.  # noqa: E501
+        :type: int
+        """
+        if cleared_balance is None:
+            raise ValueError("Invalid value for `cleared_balance`, must not be `None`")  # noqa: E501
+
+        self._cleared_balance = cleared_balance
+
+    @property
+    def uncleared_balance(self):
+        """Gets the uncleared_balance of this Account.  # noqa: E501
+
+        The current uncleared balance of the account in milliunits format  # noqa: E501
+
+        :return: The uncleared_balance of this Account.  # noqa: E501
+        :rtype: int
+        """
+        return self._uncleared_balance
+
+    @uncleared_balance.setter
+    def uncleared_balance(self, uncleared_balance):
+        """Sets the uncleared_balance of this Account.
+
+        The current uncleared balance of the account in milliunits format  # noqa: E501
+
+        :param uncleared_balance: The uncleared_balance of this Account.  # noqa: E501
+        :type: int
+        """
+        if uncleared_balance is None:
+            raise ValueError("Invalid value for `uncleared_balance`, must not be `None`")  # noqa: E501
+
+        self._uncleared_balance = uncleared_balance
+
+    @property
+    def transfer_payee_id(self):
+        """Gets the transfer_payee_id of this Account.  # noqa: E501
+
+        The payee id which should be used when transferring to this account  # noqa: E501
+
+        :return: The transfer_payee_id of this Account.  # noqa: E501
+        :rtype: str
+        """
+        return self._transfer_payee_id
+
+    @transfer_payee_id.setter
+    def transfer_payee_id(self, transfer_payee_id):
+        """Sets the transfer_payee_id of this Account.
+
+        The payee id which should be used when transferring to this account  # noqa: E501
+
+        :param transfer_payee_id: The transfer_payee_id of this Account.  # noqa: E501
+        :type: str
+        """
+        if transfer_payee_id is None:
+            raise ValueError("Invalid value for `transfer_payee_id`, must not be `None`")  # noqa: E501
+
+        self._transfer_payee_id = transfer_payee_id
+
+    @property
+    def deleted(self):
+        """Gets the deleted of this Account.  # noqa: E501
+
+        Whether or not the account has been deleted.  Deleted accounts will only be included in delta requests.  # noqa: E501
+
+        :return: The deleted of this Account.  # noqa: E501
+        :rtype: bool
+        """
+        return self._deleted
+
+    @deleted.setter
+    def deleted(self, deleted):
+        """Sets the deleted of this Account.
+
+        Whether or not the account has been deleted.  Deleted accounts will only be included in delta requests.  # noqa: E501
+
+        :param deleted: The deleted of this Account.  # noqa: E501
+        :type: bool
+        """
+        if deleted is None:
+            raise ValueError("Invalid value for `deleted`, must not be `None`")  # noqa: E501
+
+        self._deleted = deleted
 
     def to_dict(self):
         """Returns the model properties as a dict"""

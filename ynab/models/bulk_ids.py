@@ -31,14 +31,74 @@ class BulkIds(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'transaction_ids': 'list[str]',
+        'duplicate_import_ids': 'list[str]'
     }
 
     attribute_map = {
+        'transaction_ids': 'transaction_ids',
+        'duplicate_import_ids': 'duplicate_import_ids'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, transaction_ids=None, duplicate_import_ids=None):  # noqa: E501
         """BulkIds - a model defined in Swagger"""  # noqa: E501
+
+        self._transaction_ids = None
+        self._duplicate_import_ids = None
         self.discriminator = None
+
+        self.transaction_ids = transaction_ids
+        self.duplicate_import_ids = duplicate_import_ids
+
+    @property
+    def transaction_ids(self):
+        """Gets the transaction_ids of this BulkIds.  # noqa: E501
+
+        The list of Transaction ids that were created.  # noqa: E501
+
+        :return: The transaction_ids of this BulkIds.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._transaction_ids
+
+    @transaction_ids.setter
+    def transaction_ids(self, transaction_ids):
+        """Sets the transaction_ids of this BulkIds.
+
+        The list of Transaction ids that were created.  # noqa: E501
+
+        :param transaction_ids: The transaction_ids of this BulkIds.  # noqa: E501
+        :type: list[str]
+        """
+        if transaction_ids is None:
+            raise ValueError("Invalid value for `transaction_ids`, must not be `None`")  # noqa: E501
+
+        self._transaction_ids = transaction_ids
+
+    @property
+    def duplicate_import_ids(self):
+        """Gets the duplicate_import_ids of this BulkIds.  # noqa: E501
+
+        If any Transactions were not created because they had an import_id matching a transaction already on the same account, the specified import_id(s) will be included in this list.  # noqa: E501
+
+        :return: The duplicate_import_ids of this BulkIds.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._duplicate_import_ids
+
+    @duplicate_import_ids.setter
+    def duplicate_import_ids(self, duplicate_import_ids):
+        """Sets the duplicate_import_ids of this BulkIds.
+
+        If any Transactions were not created because they had an import_id matching a transaction already on the same account, the specified import_id(s) will be included in this list.  # noqa: E501
+
+        :param duplicate_import_ids: The duplicate_import_ids of this BulkIds.  # noqa: E501
+        :type: list[str]
+        """
+        if duplicate_import_ids is None:
+            raise ValueError("Invalid value for `duplicate_import_ids`, must not be `None`")  # noqa: E501
+
+        self._duplicate_import_ids = duplicate_import_ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

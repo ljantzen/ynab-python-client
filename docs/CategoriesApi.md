@@ -47,7 +47,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
 
 ### Return type
 
@@ -102,8 +102,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
- **category_id** | **str**| The id of the category | 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **category_id** | [**str**](.md)| The id of the category | 
 
 ### Return type
 
@@ -144,7 +144,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = ynab.CategoriesApi(ynab.ApiClient(configuration))
 budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can also be used to specify the last used budget)
-month = 'month_example' # str | The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC))
+month = '2013-10-20' # date | The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC))
 category_id = 'category_id_example' # str | The id of the category
 
 try:
@@ -159,9 +159,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
- **month** | **str**| The budget month in ISO format (e.g. 2016-12-30) (\&quot;current\&quot; can also be used to specify the current calendar month (UTC)) | 
- **category_id** | **str**| The id of the category | 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **month** | **date**| The budget month in ISO format (e.g. 2016-12-30) (\&quot;current\&quot; can also be used to specify the current calendar month (UTC)) | 
+ **category_id** | [**str**](.md)| The id of the category | 
 
 ### Return type
 
@@ -202,7 +202,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = ynab.CategoriesApi(ynab.ApiClient(configuration))
 budget_id = 'budget_id_example' # str | The id of the budget (\"last-used\" can also be used to specify the last used budget)
-month = 'month_example' # str | The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC))
+month = '2013-10-20' # date | The budget month in ISO format (e.g. 2016-12-30) (\"current\" can also be used to specify the current calendar month (UTC))
 category_id = 'category_id_example' # str | The id of the category
 month_category = ynab.SaveMonthCategoryWrapper() # SaveMonthCategoryWrapper | The month category to update
 
@@ -218,9 +218,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **budget_id** | **str**| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
- **month** | **str**| The budget month in ISO format (e.g. 2016-12-30) (\&quot;current\&quot; can also be used to specify the current calendar month (UTC)) | 
- **category_id** | **str**| The id of the category | 
+ **budget_id** | [**str**](.md)| The id of the budget (\&quot;last-used\&quot; can also be used to specify the last used budget) | 
+ **month** | **date**| The budget month in ISO format (e.g. 2016-12-30) (\&quot;current\&quot; can also be used to specify the current calendar month (UTC)) | 
+ **category_id** | [**str**](.md)| The id of the category | 
  **month_category** | [**SaveMonthCategoryWrapper**](SaveMonthCategoryWrapper.md)| The month category to update | 
 
 ### Return type

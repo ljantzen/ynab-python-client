@@ -16,6 +16,7 @@ import re  # noqa: F401
 
 import six
 
+from ynab.models.category import Category  # noqa: F401,E501
 from ynab.models.category_group import CategoryGroup  # noqa: F401,E501
 
 
@@ -33,14 +34,157 @@ class CategoryGroupWithCategories(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
+        'name': 'str',
+        'hidden': 'bool',
+        'deleted': 'bool',
+        'categories': 'list[Category]'
     }
 
     attribute_map = {
+        'id': 'id',
+        'name': 'name',
+        'hidden': 'hidden',
+        'deleted': 'deleted',
+        'categories': 'categories'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, id=None, name=None, hidden=None, deleted=None, categories=None):  # noqa: E501
         """CategoryGroupWithCategories - a model defined in Swagger"""  # noqa: E501
+
+        self._id = None
+        self._name = None
+        self._hidden = None
+        self._deleted = None
+        self._categories = None
         self.discriminator = None
+
+        self.id = id
+        self.name = name
+        self.hidden = hidden
+        self.deleted = deleted
+        self.categories = categories
+
+    @property
+    def id(self):
+        """Gets the id of this CategoryGroupWithCategories.  # noqa: E501
+
+
+        :return: The id of this CategoryGroupWithCategories.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this CategoryGroupWithCategories.
+
+
+        :param id: The id of this CategoryGroupWithCategories.  # noqa: E501
+        :type: str
+        """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
+
+        self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this CategoryGroupWithCategories.  # noqa: E501
+
+
+        :return: The name of this CategoryGroupWithCategories.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this CategoryGroupWithCategories.
+
+
+        :param name: The name of this CategoryGroupWithCategories.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def hidden(self):
+        """Gets the hidden of this CategoryGroupWithCategories.  # noqa: E501
+
+        Whether or not the category group is hidden  # noqa: E501
+
+        :return: The hidden of this CategoryGroupWithCategories.  # noqa: E501
+        :rtype: bool
+        """
+        return self._hidden
+
+    @hidden.setter
+    def hidden(self, hidden):
+        """Sets the hidden of this CategoryGroupWithCategories.
+
+        Whether or not the category group is hidden  # noqa: E501
+
+        :param hidden: The hidden of this CategoryGroupWithCategories.  # noqa: E501
+        :type: bool
+        """
+        if hidden is None:
+            raise ValueError("Invalid value for `hidden`, must not be `None`")  # noqa: E501
+
+        self._hidden = hidden
+
+    @property
+    def deleted(self):
+        """Gets the deleted of this CategoryGroupWithCategories.  # noqa: E501
+
+        Whether or not the category group has been deleted.  Deleted category groups will only be included in delta requests.  # noqa: E501
+
+        :return: The deleted of this CategoryGroupWithCategories.  # noqa: E501
+        :rtype: bool
+        """
+        return self._deleted
+
+    @deleted.setter
+    def deleted(self, deleted):
+        """Sets the deleted of this CategoryGroupWithCategories.
+
+        Whether or not the category group has been deleted.  Deleted category groups will only be included in delta requests.  # noqa: E501
+
+        :param deleted: The deleted of this CategoryGroupWithCategories.  # noqa: E501
+        :type: bool
+        """
+        if deleted is None:
+            raise ValueError("Invalid value for `deleted`, must not be `None`")  # noqa: E501
+
+        self._deleted = deleted
+
+    @property
+    def categories(self):
+        """Gets the categories of this CategoryGroupWithCategories.  # noqa: E501
+
+        Category group categories.  Amounts (budgeted, activity, balance, etc.) are specific to the current budget month (UTC).  # noqa: E501
+
+        :return: The categories of this CategoryGroupWithCategories.  # noqa: E501
+        :rtype: list[Category]
+        """
+        return self._categories
+
+    @categories.setter
+    def categories(self, categories):
+        """Sets the categories of this CategoryGroupWithCategories.
+
+        Category group categories.  Amounts (budgeted, activity, balance, etc.) are specific to the current budget month (UTC).  # noqa: E501
+
+        :param categories: The categories of this CategoryGroupWithCategories.  # noqa: E501
+        :type: list[Category]
+        """
+        if categories is None:
+            raise ValueError("Invalid value for `categories`, must not be `None`")  # noqa: E501
+
+        self._categories = categories
 
     def to_dict(self):
         """Returns the model properties as a dict"""

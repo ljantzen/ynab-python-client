@@ -31,14 +31,43 @@ class DateFormat(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'format': 'str'
     }
 
     attribute_map = {
+        'format': 'format'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, format=None):  # noqa: E501
         """DateFormat - a model defined in Swagger"""  # noqa: E501
+
+        self._format = None
         self.discriminator = None
+
+        self.format = format
+
+    @property
+    def format(self):
+        """Gets the format of this DateFormat.  # noqa: E501
+
+
+        :return: The format of this DateFormat.  # noqa: E501
+        :rtype: str
+        """
+        return self._format
+
+    @format.setter
+    def format(self, format):
+        """Sets the format of this DateFormat.
+
+
+        :param format: The format of this DateFormat.  # noqa: E501
+        :type: str
+        """
+        if format is None:
+            raise ValueError("Invalid value for `format`, must not be `None`")  # noqa: E501
+
+        self._format = format
 
     def to_dict(self):
         """Returns the model properties as a dict"""
