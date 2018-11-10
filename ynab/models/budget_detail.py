@@ -100,8 +100,11 @@ class BudgetDetail(object):
         self._scheduled_subtransactions = None
         self.discriminator = None
 
-        self.id = id
-        self.name = name
+        if id is not None:
+            self.id = id
+        
+        if name is not None:
+            self.name = name
         if last_modified_on is not None:
             self.last_modified_on = last_modified_on
         if date_format is not None:

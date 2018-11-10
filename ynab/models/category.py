@@ -86,50 +86,50 @@ class Category(object):
         self._deleted = None
         self.discriminator = None
 
-	if id is not None: 
-           self.id = id
+        if id is not None: 
+            self.id = id
         
         if category_group_id  is not None:
-           self.category_group_id = category_group_id
+            self.category_group_id = category_group_id
         
         if name is not None:
-           self.name = name
+            self.name = name
            
         if hidden is not None:
-           self.hidden = hidden
+            self.hidden = hidden
            
         if original_category_group_id is not None:
             self.original_category_group_id = original_category_group_id
         
         if note is not None:
-           self.note = note
+            self.note = note
         
         if budgeted is not None: 
-           self.budgeted = budgeted
+            self.budgeted = budgeted
         
         if activity is not None:
-           self.activity = activity
+            self.activity = activity
         
         if balance is not None: 
-           self.balance = balance
+            self.balance = balance
         
         if goal_type is not None:
-           self.goal_type = goal_type
+            self.goal_type = goal_type
         
         if goal_creation_month  is not None:
-           self.goal_creation_month = goal_creation_month
+            self.goal_creation_month = goal_creation_month
         
         if goal_target is not None: 
-          self.goal_target = goal_target
+            self.goal_target = goal_target
         
         if goal_target_month is not None 
-           self.goal_target_month = goal_target_month
+            self.goal_target_month = goal_target_month
         
         if goal_percentage_complete is not None:
-           self.goal_percentage_complete = goal_percentage_complete
+            self.goal_percentage_complete = goal_percentage_complete
         
         if deleted is not None:
-           self.deleted = deleted
+            self.deleted = deleted
 
     @property
     def id(self):

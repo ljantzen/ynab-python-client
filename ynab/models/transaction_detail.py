@@ -98,59 +98,59 @@ class TransactionDetail(object):
         self._subtransactions = None
         self.discriminator = None
 
-	if id is not None:
-           self.id = id
+        if id is not None:
+            self.id = id
         
         if date is not None:   
-           self.date = date
+            self.date = date
         
         if amount is not None: 
-          self.amount = amount
+            self.amount = amount
         
         if memo is not None:
-           self.memo = memo
+            self.memo = memo
         
         if cleared is not None: 
-           self.cleared = cleared
+            self.cleared = cleared
         
         if approved is not None:
-          self.approved = approved
+            self.approved = approved
         
         if flag_color is not None:
-           self.flag_color = flag_color
-        
+            self.flag_color = flag_color
+         
         if account_id is not None: 
-           self.account_id = account_id
+            self.account_id = account_id
         
         if payee_id is not None:
-        	self.payee_id = payee_id
+            self.payee_id = payee_id
         
         if category_id is not None:
-           self.category_id = category_id
+            self.category_id = category_id
         
         if transfer_account_id is not None:
-           self.transfer_account_id = transfer_account_id
+            self.transfer_account_id = transfer_account_id
         
         if transfer_transaction_id is not None:
-           self.transfer_transaction_id = transfer_transaction_id
+            self.transfer_transaction_id = transfer_transaction_id
         
         if import_id is not None: 
-           self.import_id = import_id
+            self.import_id = import_id
         
         if deleted is not None:
-           self.deleted = deleted
+            self.deleted = deleted
         
         if account_name is not None:
-           self.account_name = account_name
+            self.account_name = account_name
         
         if payee_name is not None: 
-           self.payee_name = payee_name
+            self.payee_name = payee_name
         
         if category_name is not None:
-           self.category_name = category_name
+            self.category_name = category_name
         
         if subtransactions is not None:
-           self.subtransactions = subtransactions
+            self.subtransactions = subtransactions
 
     @property
     def id(self):
