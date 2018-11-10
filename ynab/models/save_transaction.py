@@ -74,9 +74,12 @@ class SaveTransaction(object):
         self._import_id = None
         self.discriminator = None
 
-        self.account_id = account_id
-        self.date = date
-        self.amount = amount
+        if account_id is not None:       
+            self.account_id = account_id        
+        if date is not None:
+            self.date = date        
+        if amount is not None:
+            self.amount = amount        
         if payee_id is not None:
             self.payee_id = payee_id
         if payee_name is not None:
