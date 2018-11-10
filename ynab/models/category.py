@@ -122,7 +122,7 @@ class Category(object):
         if goal_target is not None: 
             self.goal_target = goal_target
         
-        if goal_target_month is not None 
+        if goal_target_month is not None: 
             self.goal_target_month = goal_target_month
         
         if goal_percentage_complete is not None:
