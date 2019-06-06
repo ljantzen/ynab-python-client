@@ -241,9 +241,6 @@ class TransactionDetail(object):
         :param memo: The memo of this TransactionDetail.  # noqa: E501
         :type: str
         """
-        if memo is None:
-            raise ValueError("Invalid value for `memo`, must not be `None`")  # noqa: E501
-
         self._memo = memo
 
     @property

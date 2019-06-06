@@ -153,6 +153,7 @@ class SubTransaction(object):
         :return: The memo of this SubTransaction.  # noqa: E501
         :rtype: str
         """
+
         return self._memo
 
     @memo.setter
@@ -163,8 +164,6 @@ class SubTransaction(object):
         :param memo: The memo of this SubTransaction.  # noqa: E501
         :type: str
         """
-        if memo is None:
-            raise ValueError("Invalid value for `memo`, must not be `None`")  # noqa: E501
 
         self._memo = memo
 
@@ -186,8 +185,6 @@ class SubTransaction(object):
         :param payee_id: The payee_id of this SubTransaction.  # noqa: E501
         :type: str
         """
-        if payee_id is None:
-            raise ValueError("Invalid value for `payee_id`, must not be `None`")  # noqa: E501
 
         self._payee_id = payee_id
 
@@ -234,8 +231,6 @@ class SubTransaction(object):
         :param transfer_account_id: The transfer_account_id of this SubTransaction.  # noqa: E501
         :type: str
         """
-        if transfer_account_id is None:
-            raise ValueError("Invalid value for `transfer_account_id`, must not be `None`")  # noqa: E501
 
         self._transfer_account_id = transfer_account_id
 
